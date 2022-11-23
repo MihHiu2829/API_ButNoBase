@@ -65,6 +65,7 @@ public class m001_LoginVM extends baseViewModel
                 if(response.code() == 200 || response.code() == 201)
                 {
                     Log.e(TAG,"Success : "+ response.body().toString()) ;
+                    Log.e(TAG,"Success : "+ call.timeout() ) ;
                 }else handleFail(response.code(),response.errorBody()) ;
             }
 
